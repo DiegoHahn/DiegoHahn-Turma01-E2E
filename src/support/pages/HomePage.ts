@@ -12,6 +12,7 @@ export default class HomePage extends BasePage {
   }
 
   async searchProductByName(): Promise<void> {
+    await this.homeElements.getSearchField().click();
     await this.homeElements.getSearchField().fill('creatina growth');
     await this.homeElements.getSearchButton().click();
   }
